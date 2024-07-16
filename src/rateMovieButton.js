@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import MovieSelector from './MovieSelector.js';
 export default function RateMovieButton(){
     const [rating, setRating]=useState(1);
     const [feedback, setFeedback] = useState('');
@@ -12,11 +13,12 @@ export default function RateMovieButton(){
     const handleFeedbackSubmission = ()=>{
         alert('Submitted successfully! Thank you for your time!');
     };
-    
+    const [selected, setSelected]=useState('Terminator');
     
 
     return(
         <div>
+            <MovieSelector/>
             <h3>Please submit your rating:</h3>
             <form>
                 <select value={rating} onChange={handleRatingChange}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 
-export default function(){
+export default function UploadButton(){
     const [upload, setUpload] = useState(false);
     const handleUploaded=()=>{
         setUpload(true);
